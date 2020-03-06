@@ -21,7 +21,7 @@ python ./main.py ./test_input.json
 ```
 
 # Usage
-To find similar screens to a new screen, you can create a new JSON file that contains basic informations about the screening. Below is an example that lists the informations neeed (if you see strings that are devided by a `|` it means that you have to choose one of the supported strings, feel free to open an issue if there is a missing choice):
+To find similar screens to a new screen, you can create a new JSON file that contains basic informations about the screening. Below is an example that lists the informations needed (if you see strings that are devided by a `|` it means that you have to choose one of the supported strings, feel free to open an issue if there is a missing choice):
 ```json
 {
   "SCREEN_ID": "<integer (if it is a new screen you can type '-1' here)>",
@@ -34,7 +34,7 @@ To find similar screens to a new screen, you can create a new JSON file that con
   "ENZYME": "CAS9 | d-Cas9-KRAB | SAM (NLS-dCas9-VP64/MS2-p65-HSF1) | sunCas9"
 }
 ```
-Once you created the JSON file you can run the script with the path to the file as a parameter like so:
+Once you created the JSON file you can run the script with the path to the file as a parameter:
 ```shell
 # From the root folder of this repo
 cd python
