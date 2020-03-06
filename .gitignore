@@ -1,0 +1,14 @@
+/* macOS */
+.DS_Store
+
+/* Virtual Python Environment */
+venv
+
+/* PyCharm IDE Config Folder */
+.idea
+
+/* Compiled Python */
+*.pyc
+
+/* Results Folder */
+results/

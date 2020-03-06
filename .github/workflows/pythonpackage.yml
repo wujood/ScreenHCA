@@ -1,0 +1,38 @@
+name: Python package
+
+on:
+  push:
+    paths:
+      - 'python/**'
+      - '.github/workflows/**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.5, 3.6, 3.7, 3.8]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        cd python
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Run main
+      env:
+        BIOGRID_ACCESSKEY: f5ed076fab5ecc7f4817bb9716efd5f0
+      run: |
+        export PYTHONPATH="${PYTHONPATH}:$GITHUB_WORKSPACE"
+        python ./python/main.py ./python/test_input.json
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: results-python-v${{ matrix.python-version }}
+        path: ./results

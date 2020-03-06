@@ -1,0 +1,19 @@
+orcs:
+  access_key: ""
+  base_url: "https://orcsws.thebiogrid.org"
+
+clustering:
+  pruning: 4
+  max_distance: 11
+
+results:
+  folder_path: "./results"
+  diagram_file_name: "diagram.png"
+  plot:
+    title: "Agglomerative Clustering with pruning = 4 and max. distance threshold = 11"
+    x_label: "Number of points in node (or index of point if no parenthesis)"
+    y_label: "Distance"
+  input_data_csv_name: "input_data.csv"
+  cluster_data_txt_name: "cluster_data.txt"
+  cluster_data_csv_folder: "./results/clusters"
+  cluster_data_csv_prefix: "cluster-"
