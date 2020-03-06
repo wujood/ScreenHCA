@@ -1,5 +1,5 @@
 # ScreenHCA (SHCA)
-![Python package](https://github.com/wujood/bioinformatics/workflows/Python%20package/badge.svg?branch=master)
+![Python package](https://github.com/wujood/ScreenHCA/workflows/Python%20package/badge.svg?branch=master)
 
 # Prerequisites
 
